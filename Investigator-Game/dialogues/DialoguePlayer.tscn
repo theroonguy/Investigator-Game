@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://dialogues/DialoguePlayer.gd" type="Script" id=1]
-[ext_resource path="res://dialogues/dialogue_box.png" type="Texture" id=2]
-[ext_resource path="res://fonts/TinyIslanders-nOYg.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://resources/ui/dialogue_box.png" type="Texture" id=2]
+[ext_resource path="res://resources/fonts/TinyIslanders-nOYg.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 14
@@ -35,7 +35,6 @@ margin_top = 3.0
 margin_right = 248.0
 margin_bottom = 32.0
 custom_fonts/normal_font = SubResource( 1 )
-text = "Message"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -46,10 +45,12 @@ margin_top = 8.0
 margin_right = 56.0
 margin_bottom = 32.0
 custom_fonts/normal_font = SubResource( 2 )
-text = "Name"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="end_dialogue" type="Timer" parent="."]
 wait_time = 0.4
 one_shot = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[node name="next_char" type="Timer" parent="."]
+
+[connection signal="timeout" from="end_dialogue" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="next_char" to="." method="_on_next_char_timeout"]

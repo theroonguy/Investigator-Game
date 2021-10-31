@@ -6,6 +6,10 @@ var dialogues = []
 var current_dialogue_id = 0
 var is_dialogue_active = false
 
+var display = ""
+var typing_speed = .05
+var current_char = 0
+
 func _ready():
 	$NinePatchRect.visible = false
 	
@@ -18,8 +22,12 @@ func play():
 	turn_off_player()
 	is_dialogue_active = true
 	$NinePatchRect.visible = true
-	current_dialogue_id = -1
-	next_line()
+	current_dialogue_id = 0
+	
+	display = ""
+	current_char = 0
+	$next_char.set_wait_time(typing_speed)
+	$next_char.start()
 	
 func _input(event):
 	if not is_dialogue_active:
@@ -31,13 +39,17 @@ func _input(event):
 func next_line():
 	current_dialogue_id += 1
 	if current_dialogue_id >= len(dialogues):
-		$Timer.start()
+		display=""
+		$end_dialogue.start()
 		$NinePatchRect.visible = false
 		turn_on_player()
+		$next_char.stop()
 		return
-	
-	$NinePatchRect/Name.text = dialogues[current_dialogue_id]["name"]
-	$NinePatchRect/Message.text = dialogues[current_dialogue_id]["text"]
+	else:
+		display = ""
+		current_char = 0
+		$next_char.set_wait_time(typing_speed)
+		$next_char.start()
 	
 func load_dialogue():
 	var file = File.new()
@@ -45,8 +57,19 @@ func load_dialogue():
 		file.open(dialogue_file, file.READ)
 		return parse_json(file.get_as_text())
 
-func _on_Timer_timeout():
+func _on_end_dialogue_timeout():
 	is_dialogue_active = false
+
+func _on_next_char_timeout():
+	if (current_char < len(dialogues[current_dialogue_id]["text"])):
+		var next_char = dialogues[current_dialogue_id]["text"][current_char]
+		display += next_char
+		
+		$NinePatchRect/Name.text = dialogues[current_dialogue_id]["name"]
+		$NinePatchRect/Message.text = display
+		current_char += 1
+	else:
+		$next_char.stop()
 
 func turn_off_player():
 	var player = get_tree().get_root().find_node("Player", true, false)

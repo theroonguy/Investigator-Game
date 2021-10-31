@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/night-water-town-tileset.png-e52fa29f93fb042f953e891938aff57a.stex"
+path="res://.import/night-water-town-tileset.png-f506aa57830faf5089bfc7740357bf4f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WaterTown/night-water-town-tileset.png"
-dest_files=[ "res://.import/night-water-town-tileset.png-e52fa29f93fb042f953e891938aff57a.stex" ]
+source_file="res://resources/watertown/night-water-town-tileset.png"
+dest_files=[ "res://.import/night-water-town-tileset.png-f506aa57830faf5089bfc7740357bf4f.stex" ]
 
 [params]
 

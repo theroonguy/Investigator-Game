@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dialogue_box.png-84d35d283d34e06f30d1c8da2c7e909e.stex"
+path="res://.import/night-water-town-objects.png-76e6758d5b52abb5cbd823c4fee943c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogues/dialogue_box.png"
-dest_files=[ "res://.import/dialogue_box.png-84d35d283d34e06f30d1c8da2c7e909e.stex" ]
+source_file="res://resources/watertown/night-water-town-objects.png"
+dest_files=[ "res://.import/night-water-town-objects.png-76e6758d5b52abb5cbd823c4fee943c7.stex" ]
 
 [params]
 
