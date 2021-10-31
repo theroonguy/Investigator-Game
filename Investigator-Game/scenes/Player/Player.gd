@@ -17,4 +17,9 @@ func _physics_process(delta):
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
-	move_and_slide(velocity)
+	velocity = move_and_slide(velocity)
+
+func set_active(active):
+	set_physics_process(active)
+	set_process(active)
+	set_process_input(active)
