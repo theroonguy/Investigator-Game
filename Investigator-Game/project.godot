@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Investigator Game"
-run/main_scene="res://resources/levels/World.tscn"
+run/main_scene="res://scenes/levels/WaterTown.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -82,6 +82,7 @@ game_interact={
 
 2d_physics/layer_1="player"
 2d_physics/layer_2="npc"
+2d_physics/layer_3="portals"
 
 [physics]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character.png-c8e4ffe44b33ba870f705dbbceb4f2de.stex"
+path="res://.import/watertown-buildings-01.png-9165e9456e75e42fa57fc33e3bb4f5b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/player/character.png"
-dest_files=[ "res://.import/character.png-c8e4ffe44b33ba870f705dbbceb4f2de.stex" ]
+source_file="res://resources/watertown/watertown-buildings-01.png"
+dest_files=[ "res://.import/watertown-buildings-01.png-9165e9456e75e42fa57fc33e3bb4f5b3.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character.png-c8e4ffe44b33ba870f705dbbceb4f2de.stex"
+path="res://.import/boat.png-b3bcd35a2ca6644f6d663c81206ceac5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/player/character.png"
-dest_files=[ "res://.import/character.png-c8e4ffe44b33ba870f705dbbceb4f2de.stex" ]
+source_file="res://resources/watertown/objects/boat.png"
+dest_files=[ "res://.import/boat.png-b3bcd35a2ca6644f6d663c81206ceac5.stex" ]
 
 [params]
 

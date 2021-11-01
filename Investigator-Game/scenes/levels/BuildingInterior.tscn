@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resources/watertown/WaterTown.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://dialogues/DialoguePlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/characters/npc/NPC.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/Door.tscn" type="PackedScene" id=6]
+
+[node name="BuildingInterior" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -262147, 1, 0, -262146, 1, 0, -262145, 1, 0, -327680, 1, 0, -327679, 1, 0, -327678, 1, 0, -327677, 1, 0, -196611, 1, 0, -196610, 1, 0, -196609, 1, 0, -262144, 1, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1, 0, -131075, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -65539, 1, 0, -65538, 1, 0, -65537, 1, 0, -131072, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -65536, 1, 0 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 6, -13 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+smoothing_enabled = true
+
+[node name="NPC" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 7, -56 )
+
+[node name="DialoguePlayer" parent="YSort/NPC" instance=ExtResource( 3 )]
+dialogue_file = "res://dialogues/jsons/npc.json"
+
+[node name="Door" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 7, 0 )
+target_scene = "res://scenes/levels/WaterTown.tscn"

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character.png-c8e4ffe44b33ba870f705dbbceb4f2de.stex"
+path="res://.import/trash_can.png-5ef54bd6af06564ab1e5b1f2d0ae1ef4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/player/character.png"
-dest_files=[ "res://.import/character.png-c8e4ffe44b33ba870f705dbbceb4f2de.stex" ]
+source_file="res://resources/watertown/objects/trash_can.png"
+dest_files=[ "res://.import/trash_can.png-5ef54bd6af06564ab1e5b1f2d0ae1ef4.stex" ]
 
 [params]
 

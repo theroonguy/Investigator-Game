@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character.png-c8e4ffe44b33ba870f705dbbceb4f2de.stex"
+path="res://.import/pillar.png-f15266dc1b00d8e309594bf3b65f2458.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/player/character.png"
-dest_files=[ "res://.import/character.png-c8e4ffe44b33ba870f705dbbceb4f2de.stex" ]
+source_file="res://resources/watertown/objects/pillar.png"
+dest_files=[ "res://.import/pillar.png-f15266dc1b00d8e309594bf3b65f2458.stex" ]
 
 [params]
 
