@@ -11,7 +11,7 @@ func count():
 
 func _on_Timer_timeout():
 	Global.time_seconds += 5
-	$AnimationPlayer.play("pull_down")
+#	$AnimationPlayer.play("pull_down")
 	if Global.time_seconds == 60:
 		Global.time_seconds = 0
 		Global.time_minutes += 1
