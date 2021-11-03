@@ -26,7 +26,6 @@ __meta__ = {
 }
 
 [node name="Watch" parent="CanvasLayer" instance=ExtResource( 3 )]
-visible = false
 anchor_left = 0.428125
 anchor_top = 0.572222
 anchor_right = 0.428125

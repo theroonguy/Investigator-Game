@@ -2,28 +2,25 @@ extends Control
 
 var pm = ""
 var display = ""
+var test = 60
 
 func _ready():
-	count()
-	
-func count():
-	$Timer.start()
+	pass
 
-func _on_Timer_timeout():
-	Global.time_seconds += 5
-#	$AnimationPlayer.play("pull_down")
-	if Global.time_seconds == 60:
-		Global.time_seconds = 0
-		Global.time_minutes += 1
-	if Global.time_minutes == 60:
-		Global.time_minutes = 0
-		Global.time_hours += 1
-	if Global.time_hours == 12:
-		Global.time_pm = true
-		Global.time_hours = 0
-		pm = "PM"
-	
+func _process(delta):
+	if Global.time_pm: pm = "PM"
+	else: pm = "AM"
+	if Global.watch_out: $".".visible = true
+	else: $".".visible = false
 	display = (str(Global.time_hours) + ":" + str(Global.time_minutes) + " " + pm)
-	
 	$Display/Time.text = display
-	count()
+	pm = "PM"
+
+func _input(event):
+	if event.is_action_pressed("game_watch"):
+		if Global.watch_out:
+			$".".visible = false
+			Global.watch_out = false
+		else:
+			$".".visible = true
+			Global.watch_out = true
