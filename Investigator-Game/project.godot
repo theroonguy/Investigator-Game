@@ -14,6 +14,10 @@ config/name="Investigator Game"
 run/main_scene="res://scenes/levels/WaterTown.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://global/Global.gd"
+
 [display]
 
 window/size/width=320

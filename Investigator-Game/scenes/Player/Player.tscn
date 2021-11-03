@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player/player.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Watch.tscn" type="PackedScene" id=3]
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 6
@@ -13,3 +14,23 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 1.51184, 5.72439 )
 polygon = PoolVector2Array( -2.51184, 1.27561, -1.51184, 2.27561, 2.48816, 2.27561, 3.48816, 1.27561, 3.48816, 0.275608, 2.48816, -0.724392, -1.51184, -0.724392, -2.51184, 0.275608 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Watch" parent="CanvasLayer" instance=ExtResource( 3 )]
+anchor_left = 0.428125
+anchor_top = 0.572222
+anchor_right = 0.428125
+anchor_bottom = 0.572222
+margin_left = -137.0
+margin_top = -103.0
+margin_right = -137.0
+margin_bottom = -103.0

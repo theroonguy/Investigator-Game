@@ -19,11 +19,6 @@ tile_data = PoolIntArray( -262147, 1, 0, -262146, 1, 0, -262145, 1, 0, -327680, 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 6, -13 )
 
-[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
-current = true
-zoom = Vector2( 0.5, 0.5 )
-smoothing_enabled = true
-
 [node name="NPC" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 7, -56 )
 
