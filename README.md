@@ -1,5 +1,5 @@
 # Investigator Game
  
-An indie game about a lone investigator who's not so alone anymore.
+An indie game about the world's biggest investigator facing the world's biggest problems.
 
-so true
+[storyline](https://github.com/Xystikon/Investigator-Game/wiki/Storyline-02)
