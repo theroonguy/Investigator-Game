@@ -14,7 +14,9 @@
             {"name": "Andrew", "text": "Hrggh..."},
             {"name": "harooony", "text": "Hey dude, you okay?"},
             {"name": "Andrew", "text": "*snores loudly*"},
-            {"name": "harooony", "text": "Uh, okay nice."}
+            {"name": "harooony", "text": "Uh, okay nice.."},
+            {"name": "Andrew", "text": "*wakes up*.. HELLO!?!"},
+            {"name": "harooony", "text": "BONJOUR MADAME!!!"}
         ]
     }
 ]
