@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ambience_harbour_waves_lap_onto_jetty_boat_passes_drone_of_city_in_bg.mp3-8325eeaf659110ed56baae544d7c8825.mp3str"
+
+[deps]
+
+source_file="res://resources/train/ambience_harbour_waves_lap_onto_jetty_boat_passes_drone_of_city_in_bg.mp3"
+dest_files=[ "res://.import/ambience_harbour_waves_lap_onto_jetty_boat_passes_drone_of_city_in_bg.mp3-8325eeaf659110ed56baae544d7c8825.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

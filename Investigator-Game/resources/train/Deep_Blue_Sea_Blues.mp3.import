@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Deep_Blue_Sea_Blues.mp3-13b95fcf8181e45e2fdbfdab254d0c60.mp3str"
+
+[deps]
+
+source_file="res://resources/train/Deep_Blue_Sea_Blues.mp3"
+dest_files=[ "res://.import/Deep_Blue_Sea_Blues.mp3-13b95fcf8181e45e2fdbfdab254d0c60.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

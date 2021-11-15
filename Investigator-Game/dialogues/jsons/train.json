@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Bolton",
+        "id": 0,
+        "dialogue": [
+            {"name":"Bolton","text":"UGUGUGUG"},
+            {"name":"harooony","text":"Uh... excuse me sir?"}
+        ]
+    },
+    {
+        "name": "Andrew",
+        "id": 1,
+        "dialogue": [
+            {"name": "Andrew", "text": "Hrggh..."},
+            {"name": "harooony", "text": "Hey dude, you okay?"},
+            {"name": "Andrew", "text": "*snores loudly*"},
+            {"name": "harooony", "text": "Uh, okay nice."}
+        ]
+    }
+]

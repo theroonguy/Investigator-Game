@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Investigator Game"
-run/main_scene="res://scenes/levels/WaterTown.tscn"
+run/main_scene="res://scenes/levels/train/Train.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -104,5 +104,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"
