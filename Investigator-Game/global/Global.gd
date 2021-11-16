@@ -3,6 +3,9 @@ extends Node
 # doors
 var door_name = null
 
+# cursor
+var hovering = false
+
 # time
 var time = 0
 var time_seconds = 0
