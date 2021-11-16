@@ -5,19 +5,22 @@
         "dialogue": [
             {"name":"Bolton","text":"i eat pee"},
             {"name":"Bolton","text":"i drink it too"},
-            {"name":"harooony","text":"what the fuck is your damage"}
+            {"name":"harooony","text":"What the fuck is your damage?!"}
         ]
     },
     {
         "name": "Andrew",
         "id": 1,
         "dialogue": [
-            {"name": "Andrew", "text": "Hrggh..."},
-            {"name": "harooony", "text": "Hey dude, you okay?"},
-            {"name": "Andrew", "text": "*snores loudly*"},
-            {"name": "harooony", "text": "Uh, okay nice.."},
-            {"name": "Andrew", "text": "*wakes up*.. HELLO!?!"},
-            {"name": "harooony", "text": "BONJOUR MADAME!!!"}
+            {"name": "Andrew", "text": "Hey kid...."},
+            {"name": "harooony", "text": "Huh?"},
+            {"name": "Andrew", "text": "*Hic* Do you wanna know the secret to success in today's society?"},
+            {"name": "harooony", "text": "Uh."},
+            {"name": "Andrew", "text": "Listen closely. The secret is..."},
+            {"name": "Andrew", "text": "If you do your best, never give up, and never stop running..."},
+            {"name": "Andrew", "text": "They'll never catch you."},
+            {"name": "harooony", "text": "..."},
+            {"name": "harooony", "text": "..........Oh."}
         ]
     }
 ]
