@@ -4,7 +4,12 @@ const ACCELERATION = 500
 export var MAX_SPEED = 40
 const FRICTION = 500
 
+var facing = "down"
+
 var velocity = Vector2.ZERO
+
+func _ready():
+	$AnimationPlayer.playback_speed = MAX_SPEED/12.4
 
 func _physics_process(delta):
 	
@@ -22,10 +27,21 @@ func _physics_process(delta):
 	
 	if velocity.x > 0:
 		$AnimationPlayer.play("WalkRight")
+		facing = "right"
 	elif velocity.x < 0:
 		$AnimationPlayer.play("WalkLeft")
+		facing = "left"
+	elif velocity.y > 0:
+		$AnimationPlayer.play("WalkUp")
+		facing = "down"
+	elif velocity.y < 0:
+		$AnimationPlayer.play("WalkDown")
+		facing = "up"
 	else:
 		$AnimationPlayer.stop()
+		if facing == "down": $Sprite2.set_frame(0)
+		elif facing == "right": $Sprite2.set_frame(4)
+		elif facing == "left": $Sprite2.set_frame(12)
 
 
 func set_active(active):
