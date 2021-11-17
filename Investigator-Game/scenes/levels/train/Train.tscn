@@ -1,25 +1,29 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://resources/train/train/train-foreground.png" type="Texture" id=1]
-[ext_resource path="res://resources/train/train/train-lightray.png" type="Texture" id=2]
+[ext_resource path="res://dialogues/DescriptorPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/train/train-void.png" type="Texture" id=3]
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/functions/ScreenShake.tscn" type="PackedScene" id=5]
 [ext_resource path="res://resources/train/Deep_Blue_Sea_Blues.mp3" type="AudioStream" id=6]
 [ext_resource path="res://resources/train/ambience_harbour_waves_lap_onto_jetty_boat_passes_drone_of_city_in_bg.mp3" type="AudioStream" id=7]
-[ext_resource path="res://dialogues/DialoguePlayer2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://dialogues/DialoguePlayer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/characters/npc/NPC.tscn" type="PackedScene" id=9]
 [ext_resource path="res://resources/train/train-lightray.png" type="Texture" id=10]
 [ext_resource path="res://resources/train/train_andrew.png" type="Texture" id=11]
 [ext_resource path="res://resources/train/train/train-background.png" type="Texture" id=12]
 [ext_resource path="res://scenes/ui/cursor.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scripts/Interactable.gd" type="Script" id=14]
 
 [sub_resource type="Environment" id=3]
 glow_enabled = true
 glow_blend_mode = 1
 glow_bicubic_upscale = true
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 2.5, 4 )
+
+[node name="Main" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 74, 4 )
@@ -55,6 +59,7 @@ polygon = PoolVector2Array( -128, -42, -48, -42, -48, -55, -128, -55 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 35, 0 )
+collision_mask = 14
 MAX_SPEED = 15
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -67,8 +72,7 @@ smoothing_speed = 2.0
 
 [node name="Andrew" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 53, -6 )
-
-[node name="DialoguePlayer2" parent="YSort/Andrew" instance=ExtResource( 8 )]
+dialoguebox = NodePath("../../DialoguePlayer")
 dialogue_file = "res://dialogues/jsons/train.json"
 
 [node name="Sprite2" type="Sprite" parent="YSort/Andrew"]
@@ -77,6 +81,7 @@ texture = ExtResource( 11 )
 
 [node name="train-foreground" type="StaticBody2D" parent="."]
 position = Vector2( 0, -2 )
+collision_layer = 0
 
 [node name="Sprite2" type="Sprite" parent="train-foreground"]
 position = Vector2( 103, -3 )
@@ -89,6 +94,7 @@ polygon = PoolVector2Array( -128, -35, -48, -35, -48, -26, -128, -26 )
 
 [node name="train-foreground2" type="StaticBody2D" parent="."]
 position = Vector2( 80, -2 )
+collision_layer = 0
 __meta__ = {
 "_edit_group_": true
 }
@@ -103,20 +109,18 @@ position = Vector2( 127, 45 )
 polygon = PoolVector2Array( -128, -35, -48, -35, -48, -26, -128, -26 )
 
 [node name="Bolton" parent="." instance=ExtResource( 9 )]
-position = Vector2( 113, 10 )
-
-[node name="DialoguePlayer2" parent="Bolton" instance=ExtResource( 8 )]
+position = Vector2( 114, 10 )
+dialoguebox = NodePath("../DialoguePlayer")
 dialogue_file = "res://dialogues/jsons/train.json"
 
 [node name="Sprite2" type="Sprite" parent="Bolton"]
-position = Vector2( 2, 0 )
+position = Vector2( 1, 1 )
 texture = ExtResource( 11 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 109, 7 )
 stream = ExtResource( 6 )
 volume_db = -16.155
-autoplay = true
 max_distance = 200.0
 attenuation = 1.62451
 
@@ -131,13 +135,6 @@ color = Color( 0.690196, 0.627451, 0.388235, 1 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
-
-[node name="Light2D9" type="Light2D" parent="."]
-visible = false
-position = Vector2( 103, -3 )
-texture = ExtResource( 2 )
-color = Color( 0.956863, 0.537255, 0.0431373, 1 )
-energy = 1.36
 
 [node name="lights" type="Node2D" parent="."]
 position = Vector2( 0.184134, 6.32962 )
@@ -227,3 +224,32 @@ __meta__ = {
 }
 
 [node name="Cursor" parent="." instance=ExtResource( 13 )]
+player = NodePath("../YSort/Player")
+
+[node name="Table" type="Area2D" parent="."]
+position = Vector2( 29, -6 )
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+descriptorbox = NodePath("../DescriptorPlayer")
+dialogue = [ "A grimy table stands menacingly before you.", "The grimy table continues to stand menacingly before you.", "Nothing about the grimy table is changing. It will always be grimy.", "You start to realize how much you and the table have in common. You are also incredibly grimy.", "Please stop clicking me." ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 4 )
+
+[node name="DescriptorPlayer" parent="." instance=ExtResource( 2 )]
+
+[node name="DialoguePlayer" parent="." instance=ExtResource( 8 )]
+
+[node name="Window" type="Area2D" parent="."]
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+descriptorbox = NodePath("../DescriptorPlayer")
+dialogue = [ "this is a window", "yeah a window", "adasda" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Window"]
+polygon = PoolVector2Array( 6, -14, 6, -11, 7, -11, 7, -10, 14, -10, 14, -11, 15, -11, 15, -14, 14, -14, 14, -15, 7, -15, 7, -14 )

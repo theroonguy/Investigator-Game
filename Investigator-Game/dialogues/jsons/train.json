@@ -3,24 +3,42 @@
         "name": "Bolton",
         "id": 0,
         "dialogue": [
-            {"name":"Bolton","text":"i eat pee"},
-            {"name":"Bolton","text":"i drink it too"},
-            {"name":"harooony","text":"What the fuck is your damage?!"}
+            {
+                "text": [
+                    {"name":"Bolton","text":"i eat pee"},
+                    {"name":"Bolton","text":"i drink it too"},
+                    {"name":"harooony","text":"What the fuck is your damage?!"}        
+                ]
+            },
+            {
+                "text": [
+                    {"name":"Bolton", "text":"get away from me, friendo"}
+                ]
+            }
         ]
     },
     {
         "name": "Andrew",
         "id": 1,
         "dialogue": [
-            {"name": "Andrew", "text": "Hey kid...."},
-            {"name": "harooony", "text": "Huh?"},
-            {"name": "Andrew", "text": "*Hic* Do you wanna know the secret to success in today's society?"},
-            {"name": "harooony", "text": "Uh."},
-            {"name": "Andrew", "text": "Listen closely. The secret is..."},
-            {"name": "Andrew", "text": "If you do your best, never give up, and never stop running..."},
-            {"name": "Andrew", "text": "They'll never catch you."},
-            {"name": "harooony", "text": "..."},
-            {"name": "harooony", "text": "..........Oh."}
+            {
+                "text": [
+                    {"name": "Andrew", "text": "Hey kid...."},
+                    {"name": "harooony", "text": "Huh?"},
+                    {"name": "Andrew", "text": "*Hic* Do you wanna know the secret to success in today's society?"},
+                    {"name": "harooony", "text": "Uh."},
+                    {"name": "Andrew", "text": "Listen closely. The secret is..."},
+                    {"name": "Andrew", "text": "If you do your best, never give up, and never stop running..."},
+                    {"name": "Andrew", "text": "They'll never catch you."},
+                    {"name": "harooony", "text": "..."},
+                    {"name": "harooony", "text": "..........Oh."}        
+                ]
+            },
+            {
+                "text":[
+                    {"name": "Andrew", "text": "I didn't tell ya nothin'."}
+                ]
+            }
         ]
     }
 ]

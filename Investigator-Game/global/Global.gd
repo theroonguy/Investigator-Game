@@ -17,6 +17,8 @@ var paused = false
 
 var watch_out = false
 
+var fullscreen_timer = 0
+   
 func _ready():
   set_process(true)
 
@@ -31,3 +33,12 @@ func _process(delta):
 		time_hours += 1
 		time_minutes = 0
 	if time_hours >= 12: time_pm = true
+	
+	# fullscreen
+	if fullscreen_timer > 0:
+		fullscreen_timer -= delta
+	else:
+		if Input.is_action_just_pressed("fullscr"):
+			OS.window_fullscreen = !OS.window_fullscreen
+			fullscreen_timer = 0.5
+			

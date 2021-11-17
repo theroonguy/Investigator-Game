@@ -1,10 +1,15 @@
 extends CanvasLayer
 
-export(String, FILE, "*.json") var dialogue_file
+var NPCName = ""
 
 var dialogues = []
 var current_dialogue_id = 0
 var is_dialogue_active = false
+
+var dialogue_file
+
+var item_id = 0
+var message_num = -1
 
 var display = ""
 var typing_speed = .05
@@ -12,22 +17,28 @@ var current_char = 0
 
 func _ready():
 	$NinePatchRect.visible = false
-	
-func play():
+
+func play(dialogue, name, num):
+	self.dialogue_file = dialogue
 	if is_dialogue_active:
 		return
-		
+	
 	dialogues=load_dialogue()
 	
-	turn_off_player()
-	is_dialogue_active = true
-	$NinePatchRect.visible = true
-	current_dialogue_id = 0
-	
-	display = ""
-	current_char = 0
-	$next_char.set_wait_time(typing_speed)
-	$next_char.start()
+	for item in dialogues:
+		if item["name"] == name:
+			item_id = item["id"]
+			if message_num+1 < len(dialogues[item_id]["dialogue"]):
+				message_num += 1
+			turn_off_player()
+			is_dialogue_active = true
+			$NinePatchRect.visible = true
+			current_dialogue_id = 0
+			
+			display = ""
+			current_char = 0
+			$next_char.set_wait_time(typing_speed)
+			$next_char.start()
 	
 func _input(event):
 	if not is_dialogue_active:
@@ -38,8 +49,10 @@ func _input(event):
 		
 func next_line():
 	current_dialogue_id += 1
-	if current_dialogue_id >= len(dialogues):
+	if current_dialogue_id >= len(dialogues[item_id]["dialogue"][message_num]["text"]):
 		display=""
+		$NinePatchRect/Message.text = display
+		$NinePatchRect/Name.text = ""
 		$end_dialogue.start()
 		$NinePatchRect.visible = false
 		turn_on_player()
@@ -53,19 +66,19 @@ func next_line():
 	
 func load_dialogue():
 	var file = File.new()
-	if file.file_exists(dialogue_file):
-		file.open(dialogue_file, file.READ)
+	if file.file_exists(self.dialogue_file):
+		file.open(self.dialogue_file, file.READ)
 		return parse_json(file.get_as_text())
 
 func _on_end_dialogue_timeout():
 	is_dialogue_active = false
 
 func _on_next_char_timeout():
-	if (current_char < len(dialogues[current_dialogue_id]["text"])):
-		var next_char = dialogues[current_dialogue_id]["text"][current_char]
+	if (current_char < len(dialogues[item_id]["dialogue"][message_num]["text"][current_dialogue_id]["text"])):
+		var next_char = dialogues[item_id]["dialogue"][message_num]["text"][current_dialogue_id]["text"][current_char]
 		display += next_char
 		
-		$NinePatchRect/Name.text = dialogues[current_dialogue_id]["name"]
+		$NinePatchRect/Name.text = dialogues[item_id]["dialogue"][message_num]["text"][current_dialogue_id]["name"]
 		$NinePatchRect/Message.text = display
 		current_char += 1
 	else:
