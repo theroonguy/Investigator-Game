@@ -237,7 +237,7 @@ __meta__ = {
 "_edit_group_": true
 }
 descriptorbox = NodePath("../DescriptorPlayer")
-dialogue = [ "A grimy table stands menacingly before you.", "The grimy table continues to stand menacingly before you.", "Nothing about the grimy table is changing. It will always be grimy.", "You start to realize how much you and the table have in common. You are also incredibly grimy.", "Please stop clicking me." ]
+dialogue = [ "A grimy table stands menacingly before you.", "The grimy table continues to stand menacingly before you.", "Nothing about the grimy table is changing. It will always be grimy.", "You start to realize how much you and the table have in common. You are also incredibly grimy.", "Please stop clicking the table.", "Please stop clicking the table.", "Okay seriously. Stop. What is this. What are you doing. What do you hope to gain by wasting your time here? Go away.", "Go away." ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
 position = Vector2( 0.5, 0 )
