@@ -25,13 +25,12 @@
                 "text": [
                     {"name": "Andrew", "text": "Hey kid...."},
                     {"name": "harooony", "text": "Huh?"},
-                    {"name": "Andrew", "text": "*Hic* Do you wanna know the secret to success in today's society?"},
+                    {"name": "Andrew", "text": "*Hic* Do ya wanna know the secret to success in today's society?"},
                     {"name": "harooony", "text": "Uh."},
                     {"name": "Andrew", "text": "Listen closely. The secret is..."},
                     {"name": "Andrew", "text": "If you do your best, never give up, and never stop running..."},
                     {"name": "Andrew", "text": "They'll never catch you."},
-                    {"name": "harooony", "text": "..."},
-                    {"name": "harooony", "text": "..........Oh."}        
+                    {"name": "harooony", "text": "..."}      
                 ]
             },
             {
