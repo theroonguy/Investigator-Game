@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player/player.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Watch.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/images.jpg" type="Texture" id=4]
 [ext_resource path="res://resources/player/player.png" type="Texture" id=5]
+[ext_resource path="res://resources/player/film-noir-character.png" type="Texture" id=6]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( -1, -8, -1, -4, 0, -4, 0, 7, 1, 7, 1, 2, 2, 2, 2, 7, 3, 7, 3, 2, 4, 2, 4, 1, 5, 1, 5, -3, 4, -3, 4, -4, 3, -4, 3, -6, 2, -6, 2, -8 )
@@ -25,6 +26,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 12, 13, 14, 15, 16, 17, 18, 19 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite3:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 length = 1.6
@@ -41,6 +66,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 4, 5, 6, 7, 4, 8, 9, 10 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite3:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.5, 0.5 ) ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 6
@@ -51,6 +100,7 @@ visible = false
 texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 5 )
 hframes = 5
 vframes = 4
@@ -89,3 +139,9 @@ occluder = SubResource( 1 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/WalkLeft = SubResource( 2 )
 anims/WalkRight = SubResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+scale = Vector2( -0.5, 0.5 )
+texture = ExtResource( 6 )
+hframes = 9
+frame = 1

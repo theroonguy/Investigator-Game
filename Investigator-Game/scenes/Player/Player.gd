@@ -9,7 +9,7 @@ var facing = "down"
 var velocity = Vector2.ZERO
 
 func _ready():
-	$AnimationPlayer.playback_speed = MAX_SPEED/12.4
+	$AnimationPlayer.playback_speed = MAX_SPEED/10.4
 
 func _physics_process(delta):
 	
