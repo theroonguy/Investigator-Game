@@ -237,7 +237,7 @@ __meta__ = {
 "_edit_group_": true
 }
 descriptorbox = NodePath("../DescriptorPlayer")
-dialogue = [ "A grimy table stands menacingly before you.", "The grimy table continues to stand menacingly before you.", "Nothing about the grimy table is changing. It will always be grimy.", "You start to realize how much you and the table have in common. You are also incredibly grimy.", "Please stop clicking the table.", "Please stop clicking the table.", "Okay seriously. Stop. What is this. What are you doing. What do you hope to gain by wasting your time here? Go away.", "Go away." ]
+dialogue_file = "res://dialogues/descriptorjsons/train_desc.json"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
 position = Vector2( 0.5, 0 )
@@ -249,7 +249,7 @@ __meta__ = {
 "_edit_group_": true
 }
 descriptorbox = NodePath("../DescriptorPlayer")
-dialogue = [ "this is a window", "yeah a window", "adasda" ]
+dialogue_file = "res://dialogues/descriptorjsons/train_desc.json"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Window"]
 polygon = PoolVector2Array( 6, -14, 6, -11, 7, -11, 7, -10, 14, -10, 14, -11, 15, -11, 15, -14, 14, -14, 14, -15, 7, -15, 7, -14 )

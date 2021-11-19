@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Window",
+        "id": 0,
+        "dialogue": [
+            {
+                "text": [
+                    {"text": "this is a window"},
+                    {"text": "yes a window"},
+                    {"text": "adasda"}        
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Table",
+        "id": 1,
+        "dialogue": [
+            {
+                "text": [
+                    {"text": "A grimy table stands menacingly before you."}
+                ]
+            },
+            {
+                "text": [
+                    {"text": "The grimy table continues to stand menacingly before you."}
+                ]
+            },
+            {
+                "text": [
+                    {"text": "Nothing about the grimy table is changing. It will always be grimy."}
+                ]
+            },
+            {
+                "text": [
+                    {"text": "You start to realize how much you and the table have in common."},
+                    {"text": "You are also incredibly grimy."}
+                ]
+            },
+            {
+                "text": [
+                    {"text": "Please stop clicking the table."}
+                ]
+            },
+            {
+                "text": [
+                    {"text": "Please stop clicking the table."}
+                ]
+            },
+            {
+                "text": [
+                    {"text": "Okay seriously. Stop. What is this. What are you doing. What do you hope to gain by wasting your time here? Go away."}
+                ]
+            },
+            {
+                "text": [
+                    {"text": "Go away."}
+                ]
+            }
+        ]
+    }
+]
