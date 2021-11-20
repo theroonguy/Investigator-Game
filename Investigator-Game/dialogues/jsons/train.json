@@ -4,15 +4,15 @@
         "id": 0,
         "dialogue": [
             {
-                "text": [
-                    {"name":"Bolton","text":"i eat pee"},
-                    {"name":"Bolton","text":"i drink it too"},
-                    {"name":"harooony","text":"What the fuck is your damage?!"}        
+                "interaction": [
+                    {"name":"Bolton","message":[{"segment": "i eat pee", "speed": 0.05}]},
+                    {"name":"Bolton","message":[{"segment": "i drink it too", "speed": 0.05}]},
+                    {"name":"harooony","message":[{"segment": "What the fuck is your damage?!", "speed": 0.25}]}        
                 ]
             },
             {
-                "text": [
-                    {"name":"Bolton", "text":"get away from me, friendo"}
+                "interaction": [
+                    {"name":"Bolton", "message":[{"segment": "get away from me, friendo", "speed": 0.05}]}
                 ]
             }
         ]
@@ -22,20 +22,20 @@
         "id": 1,
         "dialogue": [
             {
-                "text": [
-                    {"name": "Andrew", "text": "Hey kid...."},
-                    {"name": "harooony", "text": "Huh?"},
-                    {"name": "Andrew", "text": "*Hic* Do ya wanna know the secret to success in today's society?"},
-                    {"name": "harooony", "text": "Uh."},
-                    {"name": "Andrew", "text": "Listen closely. The secret is..."},
-                    {"name": "Andrew", "text": "If you do your best, never give up, and never stop running..."},
-                    {"name": "Andrew", "text": "They'll never catch you."},
-                    {"name": "harooony", "text": "..."}      
+                "interaction": [
+                    {"name": "Andrew", "message": [{"segment": "Hey kid", "speed": 0.05},{"segment": "....", "speed": 0.65}]},
+                    {"name": "harooony", "message": [{"segment": "Huh?", "speed": 0.15}]},
+                    {"name": "Andrew", "message": [{"segment": "*Hic* Do ya wanna know the secret to success in today's society?", "speed": 0.05}]},
+                    {"name": "harooony", "message": [{"segment": "Uh.", "speed": 0.75}]},
+                    {"name": "Andrew", "message": [{"segment": "Listen closely. The secret is...", "speed": 0.05}]},
+                    {"name": "Andrew", "message": [{"segment": "If you do your best, never give up, and never stop running...", "speed": 0.05}]},
+                    {"name": "Andrew", "message": [{"segment": "They'll never catch you.", "speed": 0.05}]},
+                    {"name": "harooony", "message": [{"segment": "......", "speed": 0.25},{"segment": "Ohhhh cool.", "speed":0.05}]}      
                 ]
             },
             {
-                "text":[
-                    {"name": "Andrew", "text": "I didn't tell ya nothin'."}
+                "interaction":[
+                    {"name": "Andrew", "message": [{"segment": "I didn't tell ya nothin'.", "speed": 0.05}]}
                 ]
             }
         ]

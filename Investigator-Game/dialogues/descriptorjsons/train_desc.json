@@ -4,10 +4,10 @@
         "id": 0,
         "dialogue": [
             {
-                "text": [
-                    {"text": "this is a window"},
-                    {"text": "yes a window"},
-                    {"text": "adasda"}        
+                "interaction": [
+                    {"message": "this is a window"},
+                    {"message": "yes a window"},
+                    {"message": "adasda"}        
                 ]
             }
         ]
@@ -17,45 +17,31 @@
         "id": 1,
         "dialogue": [
             {
-                "text": [
-                    {"text": "A grimy table stands menacingly before you."}
+                "interaction": [{"message": "A grimy table stands menacingly before you."}]
+            },
+            {
+                "interaction": [{"message": "The grimy table continues to stand menacingly before you."}]
+            },
+            {
+                "interaction": [{"message": "Nothing about the grimy table is changing. It will always be grimy."}]
+            },
+            {
+                "interaction": [
+                    {"message": "You start to realize how much you and the table have in common."},
+                    {"message": "You are also incredibly grimy."}
                 ]
             },
             {
-                "text": [
-                    {"text": "The grimy table continues to stand menacingly before you."}
-                ]
+                "interaction": [{"message": "Please stop clicking the table."}]
             },
             {
-                "text": [
-                    {"text": "Nothing about the grimy table is changing. It will always be grimy."}
-                ]
+                "interaction": [{"message": "Please stop clicking the table."}]
             },
             {
-                "text": [
-                    {"text": "You start to realize how much you and the table have in common."},
-                    {"text": "You are also incredibly grimy."}
-                ]
+                "interaction": [{"message": "Okay seriously. Stop. What is this. What are you doing. What do you hope to gain by wasting your time here? Go away."}]
             },
             {
-                "text": [
-                    {"text": "Please stop clicking the table."}
-                ]
-            },
-            {
-                "text": [
-                    {"text": "Please stop clicking the table."}
-                ]
-            },
-            {
-                "text": [
-                    {"text": "Okay seriously. Stop. What is this. What are you doing. What do you hope to gain by wasting your time here? Go away."}
-                ]
-            },
-            {
-                "text": [
-                    {"text": "Go away."}
-                ]
+                "interaction": [{"message": "Go away."}]
             }
         ]
     }
