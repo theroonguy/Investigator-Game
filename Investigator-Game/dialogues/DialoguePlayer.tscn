@@ -36,7 +36,17 @@ margin_right = 333.0
 margin_bottom = 53.0
 rect_scale = Vector2( 0.7, 0.7 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "Hello there my name is Haroon"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 4.0
+margin_top = 6.0
+margin_right = 359.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.7, 0.7 )
+custom_fonts/normal_font = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,10 +58,12 @@ margin_right = 79.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.7, 0.7 )
 custom_fonts/normal_font = SubResource( 2 )
-text = "Omg name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="end_dialogue" type="Timer" parent="."]
-wait_time = 0.4
+wait_time = 0.2
 one_shot = true
 
 [node name="next_char" type="Timer" parent="."]
