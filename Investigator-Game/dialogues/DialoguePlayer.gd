@@ -117,8 +117,8 @@ func _on_end_dialogue_timeout():
 
 func _on_next_char_timeout():
 	if (current_segment < len(dialogues[item_id]["dialogue"][message_num]["interaction"][current_dialogue_id]["message"])):
-		$next_char.set_wait_time(dialogues[item_id]["dialogue"][message_num]["interaction"][current_dialogue_id]["message"][current_segment]["speed"])
-	if (current_segment < len(dialogues[item_id]["dialogue"][message_num]["interaction"][current_dialogue_id]["message"])):
+		if (current_segment < len(dialogues[item_id]["dialogue"][message_num]["interaction"][current_dialogue_id]["message"])):
+			$next_char.set_wait_time(dialogues[item_id]["dialogue"][message_num]["interaction"][current_dialogue_id]["message"][current_segment]["speed"])
 		if (current_char < len(dialogues[item_id]["dialogue"][message_num]["interaction"][current_dialogue_id]["message"][current_segment]["segment"])):
 			var next_char = dialogues[item_id]["dialogue"][message_num]["interaction"][current_dialogue_id]["message"][current_segment]["segment"][current_char]
 			display += next_char		# add new character

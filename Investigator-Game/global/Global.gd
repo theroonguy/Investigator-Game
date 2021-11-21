@@ -1,5 +1,8 @@
 extends Node
 
+var viewport_container = null
+var viewport = null
+
 # doors
 var door_name = null
 

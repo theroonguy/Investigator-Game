@@ -1,12 +1,14 @@
 extends KinematicBody2D
 
-const ACCELERATION = 500
+const ACCELERATION = 250
 export var MAX_SPEED = 40
 const FRICTION = 500
 
 var facing = "down"
 
 var velocity = Vector2.ZERO
+
+onready var player = get_node(".")
 
 func _ready():
 	$AnimationPlayer.playback_speed = MAX_SPEED/10.4
@@ -26,23 +28,31 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 	
 	if velocity.x > 0:
-		$AnimationPlayer.play("WalkRight")
-		facing = "right"
+		$AnimatedSprite.play("walk_left")
+		$AnimatedSprite.flip_h = true
 	elif velocity.x < 0:
-		$AnimationPlayer.play("WalkLeft")
-		facing = "left"
-	elif velocity.y > 0:
-		$AnimationPlayer.play("WalkUp")
-		facing = "down"
-	elif velocity.y < 0:
-		$AnimationPlayer.play("WalkDown")
-		facing = "up"
+		$AnimatedSprite.play("walk_left")
+		$AnimatedSprite.flip_h = false
 	else:
-		$AnimationPlayer.stop()
-		if facing == "down": $Sprite2.set_frame(0)
-		elif facing == "right": $Sprite2.set_frame(4)
-		elif facing == "left": $Sprite2.set_frame(12)
-
+		$AnimatedSprite.stop()
+#
+#	if velocity.x > 0:
+#		$AnimationPlayer.play("WalkRight")
+#		facing = "right"
+#	elif velocity.x < 0:
+#		$AnimationPlayer.play("WalkLeft")
+#		facing = "left"
+#	elif velocity.y > 0:
+#		$AnimationPlayer.play("WalkUp")
+#		facing = "down"
+#	elif velocity.y < 0:
+#		$AnimationPlayer.play("WalkDown")
+#		facing = "up"
+#	else:
+#		$AnimationPlayer.stop()
+#		if facing == "down": $Sprite2.set_frame(0)
+#		elif facing == "right": $Sprite2.set_frame(4)
+#		elif facing == "left": $Sprite2.set_frame(12)
 
 func set_active(active):
 	set_physics_process(active)

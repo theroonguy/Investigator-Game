@@ -21,7 +21,7 @@ func _input(event):
 		$Sprite.set_frame(1)
 		
 		if Global.hovering:
-			if collider.get_global_position().distance_to(get_node(player).get_global_position()) < 20:
+			if collider.get_global_position().distance_to(get_node(player).get_global_position()) < 40:
 				collider.interact()
 	elif event.is_action_released("click"):
 		clicking = false
