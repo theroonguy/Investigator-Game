@@ -16,7 +16,6 @@ font_data = ExtResource( 3 )
 script = ExtResource( 1 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-visible = false
 margin_left = 32.0
 margin_top = 128.0
 margin_right = 288.0
@@ -69,6 +68,6 @@ one_shot = true
 
 [node name="next_char" type="Timer" parent="."]
 
-[connection signal="timeout" from="end_dialogue" to="." method="_on_end_dialogue_timeout"]
 [connection signal="timeout" from="end_dialogue" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="end_dialogue" to="." method="_on_end_dialogue_timeout"]
 [connection signal="timeout" from="next_char" to="." method="_on_next_char_timeout"]

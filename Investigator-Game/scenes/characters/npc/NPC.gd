@@ -2,6 +2,7 @@ extends Area2D
 
 export(NodePath) var dialoguebox
 export(String, FILE, "*.json") var dialogue_file
+export(NodePath) var camera
 
 var current_interaction = -1
 var dialogues

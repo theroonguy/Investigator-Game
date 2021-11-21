@@ -5,9 +5,9 @@
         "dialogue": [
             {
                 "interaction": [
-                    {"message": "this is a window"},
-                    {"message": "yes a window"},
-                    {"message": "adasda"}        
+                    {"message": [{"segment": "this is a window", "speed": 0.05}]},
+                    {"message": [{"segment": "yes a window", "speed": 0.05}]},
+                    {"message": [{"segment": "adasda", "speed": 0.05}]}        
                 ]
             }
         ]
@@ -17,31 +17,31 @@
         "id": 1,
         "dialogue": [
             {
-                "interaction": [{"message": "A grimy table stands menacingly before you."}]
+                "interaction": [{"message": [{"segment": "A grimy table stands menacingly before you.", "speed": 0.05}]}]
             },
             {
-                "interaction": [{"message": "The grimy table continues to stand menacingly before you."}]
+                "interaction": [{"message": [{"segment": "The grimy table continues to stand menacingly before you.", "speed": 0.05}]}]
             },
             {
-                "interaction": [{"message": "Nothing about the grimy table is changing. It will always be grimy."}]
+                "interaction": [{"message": [{"segment": "Nothing about the grimy table is changing. It will always be grimy.", "speed": 0.05}]}]
             },
             {
                 "interaction": [
-                    {"message": "You start to realize how much you and the table have in common."},
-                    {"message": "You are also incredibly grimy."}
+                    {"message": [{"segment": "You start to realize how much you and the table have in common.", "speed": 0.05}]},
+                    {"message": [{"segment": "You are also incredibly grimy.", "speed": 0.05}]}
                 ]
             },
             {
-                "interaction": [{"message": "Please stop clicking the table."}]
+                "interaction": [{"message": [{"segment": "Please stop clicking the table.", "speed": 0.05}]}]
             },
             {
-                "interaction": [{"message": "Please stop clicking the table."}]
+                "interaction": [{"message": [{"segment": "Please stop clicking the table.", "speed": 0.05}]}]
             },
             {
-                "interaction": [{"message": "Okay seriously. Stop. What is this. What are you doing. What do you hope to gain by wasting your time here? Go away."}]
+                "interaction": [{"message": [{"segment": "Okay seriously. Stop. What is this. What are you doing. What do you hope to gain by wasting your time here? Go away.", "speed": 0.05}]}]
             },
             {
-                "interaction": [{"message": "Go away."}]
+                "interaction": [{"message": [{"segment": "Go away.", "speed": 0.05}]}]
             }
         ]
     }
